@@ -1,0 +1,22 @@
+{{template "header" .}}
+
+<div id="content" class="container">
+    <div class="jumbotron mt-3">
+        <h1 class="display-4">Golang back channel for OKTA!</h1>
+        <p class="lead">POC to test backend Authorization flow for Slate Apps.</p>
+        <hr class="my-4">
+        {{if .IsAuthenticated}}
+            <div class="text container">
+                <p>Welcome back, <span>{{.Profile.Name}}</span>!</p>
+            </div>
+        {{else}}
+            <div>
+                <p>Hello BBI Employee! Let's login.</p>
+            </div>
+            <form method="get" action="login">
+                <button id="login-button" class="btn btn-primary" type="submit">Login</button>
+            </form>
+        {{end}}
+    </div>
+</div>
+{{template "footer"}}

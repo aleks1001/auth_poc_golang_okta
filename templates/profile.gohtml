@@ -1,0 +1,52 @@
+{{template "header" .}}
+<div id="content" class="container">
+
+    <div>
+        <h2>My Profile</h2>
+        <p>Hello, <span>{{ .Profile.Name }}</span></p>
+    </div>
+
+    <table class="table table-striped w-auto">
+        <thead>
+        <tr>
+            <th>Claim</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-info">
+            <td>Name</td>
+            <td id="claim-name">{{ .Profile.Name }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="claim-email">{{ .Profile.Email }}</td>
+        </tr>
+        <tr>
+            <td>Sub</td>
+            <td id="claim-sub">{{ .Profile.Sub }}</td>
+        </tr>
+        <tr>
+            <td>Zoneinfo</td>
+            <td id="claim-zoneinfo">{{ .Profile.Zoneinfo }}</td>
+        </tr>
+        <tr>
+            <td>UpdatedAt</td>
+            <td id="claim-updated-at">{{ .Profile.UpdatedAt }}</td>
+        </tr>
+        <tr>
+            <td>IdToken</td>
+            <td id="claim-id-token">{{ .IdToken }}</td>
+        </tr>
+        <tr>
+            <td>AccessToken</td>
+            <td id="claim-access-token">{{ .AccessToken }}</td>
+        </tr>
+        <tr>
+            <td>IQOS Token</td>
+            <td id="claim-access-token">{{ .IQOSToken }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{{template "footer"}}
